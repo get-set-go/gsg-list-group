@@ -23,6 +23,18 @@ export default class GSGListItem extends React.Component {
       });
     }
 
+    if (_item.props.bStyle) {
+      _bClass = objectAssign(_bClass, {
+        [`list-group-item-${_item.props.bStyle}`]: true
+      });
+    }
+
+    if (_item.props.isDisabled) {
+      _bClass = objectAssign(_bClass, {
+        'disabled': true
+      });
+    }
+
     _bClass = classNames(_bClass);
 
     return(
@@ -32,5 +44,10 @@ export default class GSGListItem extends React.Component {
 };
 
 GSGListItem.propTypes = {
+  bStyle: PropTypes.string,
   item: PropTypes.array
+};
+
+GSGListItem.defaultProps = {
+  isDisabled: false
 };
