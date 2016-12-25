@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { ListGroup, ListItem } from '../dist/index.min';
+import Badge from 'gsg-badge';
 
 class Page extends React.Component {
   render() {
@@ -60,6 +61,17 @@ class Page extends React.Component {
               <ListItem>Python</ListItem>
               <ListItem>Golang</ListItem>
               <ListItem>Node.js</ListItem>
+            </ListGroup>
+        </p>
+
+        <p className="list-group-eg-group">
+          <h4>ListGroup with badge</h4>
+
+            <ListGroup>
+              <ListItem><Badge>10</Badge> Inbox</ListItem>
+              <ListItem><Badge>6</Badge> Sent</ListItem>
+              <ListItem><Badge>5</Badge> Delete</ListItem>
+              <ListItem><Badge>3</Badge> Draft</ListItem>
             </ListGroup>
         </p>
 
