@@ -40,7 +40,8 @@
     "object-assign": "^4.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "gsg-common-style": "https://github.com/get-set-go/gsg-common-style.git"
+    "gsg-common-style": "https://github.com/get-set-go/gsg-common-style.git",
+    "gsg-badge": "https://github.com/get-set-go/gsg-badge.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
