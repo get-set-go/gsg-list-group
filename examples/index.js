@@ -7,6 +7,21 @@ import { ListGroup, ListItem } from '../dist/index.min';
 import Badge from 'gsg-badge';
 
 class Page extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.helloGoogle = this.helloGoogle.bind(this);
+    this.helloGithub = this.helloGithub.bind(this);
+  }
+
+  helloGoogle() {
+    alert('Hello Google!');
+  }
+
+  helloGithub() {
+    alert('Hello Github!');
+  }
+
   render() {
     return (
       <div className="list-group-eg-container">
@@ -72,6 +87,24 @@ class Page extends React.Component {
               <ListItem><Badge>6</Badge> Sent</ListItem>
               <ListItem><Badge>5</Badge> Delete</ListItem>
               <ListItem><Badge>3</Badge> Draft</ListItem>
+            </ListGroup>
+        </p>
+
+        <p className="list-group-eg-group">
+          <h4>ListGroup linked items via anchor tag</h4>
+
+            <ListGroup>
+              <ListItem linkIn="https://www.google.com">Open Google in same tab</ListItem>
+              <ListItem linkIn="https://www.github.com" target="_blank">Open Github in new tab</ListItem>
+            </ListGroup>
+        </p>
+
+        <p className="list-group-eg-group">
+          <h4>ListGroup linked items via button tag</h4>
+
+            <ListGroup>
+              <ListItem onClick={this.helloGoogle}>Hello Google!</ListItem>
+              <ListItem onClick={this.helloGithub}>Hello Github!</ListItem>
             </ListGroup>
         </p>
 

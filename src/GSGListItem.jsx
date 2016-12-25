@@ -10,6 +10,18 @@ export default class GSGListItem extends React.Component {
     super(props);
   }
 
+  _anchor(_bClass, _params) {
+    return (
+      <a href={_params.linkIn} target={_params.target} className={_bClass}>{_params.children}</a>
+    );
+  }
+
+  _button(_bClass, _params) {
+    return (
+      <button type="button" onClick={_params.onClick} className={_bClass}>{_params.children}</button>
+    );
+  }
+
   render() {
     let _item = this.props.item;
 
@@ -37,17 +49,24 @@ export default class GSGListItem extends React.Component {
 
     _bClass = classNames(_bClass);
 
-    return(
-      <a href="#" className={_bClass}>{_item.props.children}</a>
-    );
+    let _linkEl = this._anchor(_bClass, _item.props);
+    if (_item.props.linkIn === '#') {
+      _linkEl = this._button(_bClass, _item.props);
+    }
+
+    return _linkEl;
   }
 };
 
 GSGListItem.propTypes = {
   bStyle: PropTypes.string,
-  item: PropTypes.array
+  target: PropTypes.string,
+  linkIn: PropTypes.string,
+  item: PropTypes.array,
+  onClick: PropTypes.func
 };
 
 GSGListItem.defaultProps = {
-  isDisabled: false
+  isDisabled: false,
+  linkIn: "#"
 };
