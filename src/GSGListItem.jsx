@@ -1,15 +1,9 @@
-import '../node_modules/gsg-common-style/less/label/index.less';
-
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import objectAssign from 'object-assign';
 
 export default class GSGListItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   _anchor(_bClass, _params) {
     return (
       <a href={_params.linkIn} target={_params.target} className={_bClass}>{_params.children}</a>
@@ -23,7 +17,7 @@ export default class GSGListItem extends React.Component {
   }
 
   render() {
-    let _item = this.props.item;
+    const { _item } = this.props;
 
     let _bClass = {
       'list-group-item': true
