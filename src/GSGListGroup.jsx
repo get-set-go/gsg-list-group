@@ -7,12 +7,8 @@ import classNames from 'classnames';
 import ListItem from './GSGListItem.jsx';
 
 export default class GSGListGroup extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    let _listItems = this.props.children.map((listitem) => <ListItem key={listitem.index} item={listitem}></ListItem>);
+    let _listItems = this.props.children.map((listitem) => <ListItem key={listitem.index} _item={listitem}></ListItem>);
 
     return(
       <div className="list-group">

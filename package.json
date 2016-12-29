@@ -1,6 +1,6 @@
 {
   "name": "gsg-list-group",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Get-Set-Go list-group component",
   "main": "dist/index.min.js",
   "scripts": {
