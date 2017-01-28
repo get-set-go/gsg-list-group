@@ -64,7 +64,6 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.4.1",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
